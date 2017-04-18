@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avantgarde</title>
+    <link rel="stylesheet" href="js/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section class="ratings">
+    <div class="rating positive">
+        <p><span class="rating-number">0</span></p>
+        <p><span class="rating-symbol">+</span><span class="rating-label">Positive</span></p>
+    </div><!--
+    -->
+    <div class="rating negative">
+        <p><span class="rating-number">0</span></p>
+        <p><span class="rating-symbol">-</span><span class="rating-label">Negative</span></p>
+    </div>
+</section>
+<section class="restaurants owl-carousel swiper-container">
+    <div class="swiper-wrapper">
+        <div class="item swiper-slide" data-positive="234" data-negative="123">
+            <article class="restaurant">
+                <figure class="restaurant-figure">
+                    <img class="restaurant-img" src="img.jpg" alt="Restaurante">
+                </figure>
+                <div class="restaurant-content">
+                    <header class="restaurant-header">
+                        <h1 class="restaurant-title">Florestore</h1>
+                        <p class="restaurant-location">375 Valencia St</p>
+                    </header>
+                    <div class="content">
+                        <p>0.4km</p>
+                    </div>
+                    <footer class="restaurant-footer">
+                        <button class="btn btn-primary js-feedback">Feedback</button>
+                    </footer>
+                </div>
+            </article>
+        </div>
+        <div class="item swiper-slide" data-positive="125" data-negative="2">
+            <article class="restaurant">
+                <figure class="restaurant-figure">
+                    <img class="restaurant-img" src="img.jpg" alt="Restaurante">
+                </figure>
+                <div class="restaurant-content">
+                    <header class="restaurant-header">
+                        <h1 class="restaurant-title">Florestore</h1>
+                        <p class="restaurant-location">375 Valencia St</p>
+                    </header>
+                    <div class="content">
+                        <p>0.4km</p>
+                    </div>
+                    <footer class="restaurant-footer">
+                        <button class="btn btn-primary js-feedback">Feedback</button>
+                    </footer>
+                </div>
+            </article>
+        </div>
+        <div class="item swiper-slide" data-positive="87" data-negative="281">
+            <article class="restaurant">
+                <figure class="restaurant-figure">
+                    <img class="restaurant-img" src="img.jpg" alt="Restaurante">
+                </figure>
+                <div class="restaurant-content">
+                    <header class="restaurant-header">
+                        <h1 class="restaurant-title">Florestore</h1>
+                        <p class="restaurant-location">375 Valencia St</p>
+                    </header>
+                    <div class="content">
+                        <p>0.4km</p>
+                    </div>
+                    <footer class="restaurant-footer">
+                        <button class="btn btn-primary js-feedback">Feedback</button>
+                    </footer>
+                </div>
+            </article>
+        </div>
+        <div class="item swiper-slide" data-positive="34" data-negative="1">
+            <article class="restaurant">
+                <figure class="restaurant-figure">
+                    <img class="restaurant-img" src="img.jpg" alt="Restaurante">
+                </figure>
+                <div class="restaurant-content">
+                    <header class="restaurant-header">
+                        <h1 class="restaurant-title">Florestore</h1>
+                        <p class="restaurant-location">375 Valencia St</p>
+                    </header>
+                    <div class="content">
+                        <p>0.4km</p>
+                    </div>
+                    <footer class="restaurant-footer">
+                        <button class="btn btn-primary js-feedback">Feedback</button>
+                    </footer>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<script src="js/jquery-3.2.0.min.js"></script>
+<script src="js/swiper/js/swiper.jquery.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper-container', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        mousewheelControl: true,
+        coverflow: {
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: false
+        },
+        onTransitionStart: function (swiper) {
+            const $slide = $(swiper.slides[swiper.realIndex]);
+
+            $('.rating.positive .rating-number').stop(true, true).prop('Counter', 0).animate({
+                Counter: $slide.data('positive')
+            }, {
+                duration: 1000,
+                easing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+
+            $('.rating.negative .rating-number').stop(true, true).prop('Counter', 0).animate({
+                Counter: $slide.data('negative')
+            }, {
+                duration: 1000,
+                easing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+
+        }
+    });
+</script>
+</body>
+</html>

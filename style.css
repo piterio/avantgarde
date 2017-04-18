@@ -1,0 +1,278 @@
+/**
+RESETEO DEL CSS
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+/* remember to define focus styles! */
+:focus {
+    outline: 0;
+}
+
+body {
+    line-height: 1.2;
+    color: black;
+    background: white;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+}
+
+input, textarea, select, button {
+    -webkit-appearance: none !important;
+    -webkit-border-radius: 0px 0px 0px 0px !important;
+}
+
+textarea {
+    padding: 0px;
+}
+
+/* compatibilidad de elementos con navegadores antiguos */
+abbr, article, aside, audio, canvas, datalist, details, dialog,
+figure, footer, header, mark, menu, meter, nav, output, progress, section, time, video {
+    display: block;
+}
+
+img {
+    border: none;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url(./fonts/roboto/Roboto-Regular.eot);
+    src: url(./fonts/roboto/Roboto-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    src: url(./fonts/roboto/Roboto-Italic.eot);
+    src: url(./fonts/roboto/Roboto-Italic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url(./fonts/roboto/Roboto-Bold.eot);
+    src: url(./fonts/roboto/Roboto-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+    src: url(./fonts/roboto/Roboto-BoldItalic.eot);
+    src: url(./fonts/roboto/Roboto-BoldItalic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: url(./fonts/roboto/Roboto-Light.eot);
+    src: url(./fonts/roboto/Roboto-Light.ttf) format('truetype');
+}
+
+html,
+body,
+td {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+select,
+p,
+a,
+span,
+td {
+    font-family: 'Roboto', sans-serif;
+}
+
+textarea,
+input {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400
+}
+
+body {
+    background-color: #3b3b47;
+}
+
+.restaurants {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.restaurants .list {
+    min-width: 101%;
+}
+
+.restaurants .item {
+    width: 225px;
+}
+
+.restaurant {
+    background-color: #ffffff;
+    width: 225px;
+    box-shadow: 9px 7px 40px -6px rgba(0, 0, 0, 0.25);
+}
+
+.restaurant .restaurant-figure {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.restaurant .restaurant-figure .restaurant-img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.restaurant .restaurant-header {
+}
+
+.restaurant .restaurant-header .restaurant-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.restaurant .restaurant-header .restaurant-location {
+    font-size: 0.9375rem;
+    font-style: italic;
+}
+
+.restaurant .restaurant-content {
+    padding: 1.375rem;
+}
+
+.restaurant .restaurant-content .content {
+    font-size: 0.8125rem;
+    color: #ccc;
+    margin: .5rem 0 2rem;
+}
+
+.ratings {
+    overflow: hidden;
+    margin: 1rem auto;
+    width: 225px;
+}
+
+.ratings .rating {
+    width: 50%;
+    float: left;
+    padding: 2rem 0 .5rem;
+    border-top: 1px solid #828282;
+}
+
+.ratings .rating + .rating {
+    border-left: 1px solid #828282;
+    padding-left: 2rem;
+}
+
+.ratings .rating .rating-number{
+    font-size: 1.6875rem;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+.ratings .rating .rating-symbol {
+    margin-right: 0.5rem;
+    color: #5bc478;
+}
+
+.ratings .rating.negative .rating-symbol {
+    color: #c14a3b;
+}
+
+.ratings .rating .rating-label {
+    text-transform: uppercase;
+    font-size: 0.6875rem;
+    color: #c1bebe;
+}
+
+.btn {
+    display: inline-block;
+    padding: .5rem 1.25rem;
+    font-size: 0.6875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    box-shadow: 0 9px 25px 0px #ccc;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 5rem !important;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.btn.btn-primary {
+    color: #F0DB6E;
+    background-color: #292733;
+    border-color: #F0DB6E;
+}
+
+.item {
+    opacity: 0.4;
+    transition: .4s ease all;
+    margin: 20px;
+    transform: scale(.8);
+}
+
+.item.swiper-slide-active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.swiper-slide {
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+}
+
+.swiper-slide:not(.swiper-slide-active) {
+    -webkit-filter: blur(5px); /* Chrome, Opera, etc. */
+    filter: url('blur.svg#blur'); /* Older FF and others - http://jordanhollinger.com/media/blur.svg */
+    filter: blur(5px); /* Firefox 35+, eventually all */
+}
