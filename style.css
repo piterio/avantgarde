@@ -134,6 +134,10 @@ body {
     background-color: #3b3b47;
 }
 
+.oculto {
+    display: none;
+}
+
 .restaurants {
     width: 100%;
     overflow-x: auto;
@@ -207,7 +211,7 @@ body {
     padding-left: 2rem;
 }
 
-.ratings .rating .rating-number{
+.ratings .rating .rating-number {
     font-size: 1.6875rem;
     color: #ffffff;
     font-weight: 300;
@@ -254,6 +258,13 @@ body {
     border-color: #F0DB6E;
 }
 
+.btn.btn-secondary {
+    color: #edd96f;
+    background-color: transparent;
+    border-color: #edd96f;
+    box-shadow: 0 9px 25px 0px #f9f2cd;
+}
+
 .item {
     opacity: 0.4;
     transition: .4s ease all;
@@ -275,4 +286,103 @@ body {
     -webkit-filter: blur(5px); /* Chrome, Opera, etc. */
     filter: url('blur.svg#blur'); /* Older FF and others - http://jordanhollinger.com/media/blur.svg */
     filter: blur(5px); /* Firefox 35+, eventually all */
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    outline: 0;
+}
+
+.overlay .popup {
+    position: relative;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 3rem 2rem 2rem;
+    background-color: #ffffff;
+
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.overlay.show {
+    visibility: visible;
+}
+
+.overlay.show .popup {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+.popup .popup-header {
+    margin-bottom: 2rem;
+}
+
+.popup .popup-header .popup-title {
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #34323d;
+}
+
+.popup .popup-header p {
+    font-size: 0.8125rem;
+    line-height: 1.8;
+    color: #98979d;
+}
+
+.popup .close{
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.form .form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem 2rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #34323d;
+    background: #fff none;
+    border: 0;
+    border-bottom: 1px solid #f2f2f2;
+    border-radius: 0;
+    margin-bottom: 1.5rem;
+}
+
+.form .form-control.textarea {
+    margin-top: 3rem;
+    border: 1px solid #f2f2f2;
+    padding: 1rem 2rem;
+    min-height: 200px;
+}
+
+.form .form-control:active,
+.form .form-control:hover {
+    border-color: #edd96f;
+}
+
+.form .btn {
+    margin: .5rem 0 0 2rem;
 }
