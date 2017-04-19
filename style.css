@@ -408,25 +408,3 @@ body {
 .form .btn {
     margin: .5rem 0 0 2rem;
 }
-
-@media only screen and (max-width: 380px) {
-    .overlay .popup {
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
-        height: 100%;
-    }
-
-    .form .form-control.textarea {
-        margin-top: 1.5rem;
-        min-height: 110px;
-    }
-
-    .popup .popup-header {
-        margin-bottom: 1.5rem;
-    }
-
-    .form .form-control {
-        margin-bottom: 1rem;
-    }
-}
