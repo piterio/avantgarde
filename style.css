@@ -417,3 +417,15 @@ body {
         font-size: 16px;
     }
 }
+
+@media only screen and (max-width: 380px) {
+    .overlay .popup {
+        margin: 2.5% auto;
+        height: 95%;
+    }
+
+    .form .form-control.textarea {
+        margin-top: 1.5rem;
+        min-height: 110px;
+    }
+}
