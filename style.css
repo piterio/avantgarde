@@ -140,7 +140,7 @@ body {
 
 .restaurants {
     width: 100%;
-    overflow-x: auto;
+    overflow-x: hidden;
 }
 
 .restaurants .list {
@@ -250,12 +250,23 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .btn.btn-primary {
-    color: #F0DB6E;
+    color: #edd96f;
     background-color: #292733;
-    border-color: #F0DB6E;
+    border-color: #edd96f;
+}
+
+.swiper-slide-active .btn.btn-primary:active,
+.swiper-slide-active .btn.btn-primary:hover {
+    box-shadow: 0 1px 25px 0px #ccc;
+    background-color: #edd96f;
+    color: #292733;
 }
 
 .btn.btn-secondary {
@@ -263,6 +274,13 @@ body {
     background-color: transparent;
     border-color: #edd96f;
     box-shadow: 0 9px 25px 0px #f9f2cd;
+}
+
+.swiper-slide-active .btn.btn-secondary:active,
+.swiper-slide-active .btn.btn-secondary:hover {
+    box-shadow: 0 1px 25px 0px #f9f2cd;
+    color: #ffffff;
+    background-color: #edd96f;
 }
 
 .item {
@@ -305,8 +323,12 @@ body {
 
 .overlay .popup {
     position: relative;
-    max-width: 500px;
-    margin: 30px auto;
+    max-width: 95%;
+    width: 500px;
+    height: auto;
+    max-height: 575px;
+    overflow: hidden;
+    margin: 2rem auto;
     padding: 3rem 2rem 2rem;
     background-color: #ffffff;
 
@@ -349,7 +371,7 @@ body {
     color: #98979d;
 }
 
-.popup .close{
+.popup .close {
     position: absolute;
     top: 1rem;
     right: 2rem;
@@ -361,7 +383,7 @@ body {
     display: block;
     width: 100%;
     padding: .375rem 2rem;
-    font-size: 1rem;
+    font-size: 0.8125rem;
     line-height: 1.5;
     color: #34323d;
     background: #fff none;
@@ -375,7 +397,7 @@ body {
     margin-top: 3rem;
     border: 1px solid #f2f2f2;
     padding: 1rem 2rem;
-    min-height: 200px;
+    min-height: 165px;
 }
 
 .form .form-control:active,
@@ -385,4 +407,26 @@ body {
 
 .form .btn {
     margin: .5rem 0 0 2rem;
+}
+
+@media only screen and (max-width: 380px) {
+    .overlay .popup {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        height: 100%;
+    }
+
+    .form .form-control.textarea {
+        margin-top: 1.5rem;
+        min-height: 110px;
+    }
+
+    .popup .popup-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .form .form-control {
+        margin-bottom: 1rem;
+    }
 }
