@@ -286,7 +286,7 @@ body {
 .item {
     opacity: 0.4;
     transition: .4s ease all;
-    margin: 20px;
+    margin: .5rem;
     transform: scale(.8);
 }
 

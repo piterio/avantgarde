@@ -126,6 +126,7 @@
         centeredSlides: true,
         slidesPerView: 'auto',
         mousewheelControl: true,
+        resizeReInit: true,
         coverflow: {
             rotate: 0,
             stretch: 0,
@@ -158,11 +159,11 @@
         }
     });
 
-    $(".swiper-slide-active .js-feedback").on('click touchend', function (evt) {
+    $(".js-feedback").on('click touchend', function (evt) {
         evt.preventDefault();
         evt.stopPropagation();
-
-        $("#feedback").addClass('show');
+        if ($(this).parents('.item').hasClass('swiper-slide-active'))
+            $("#feedback").addClass('show');
     });
     $(".js-close-popup").on('click touchend', function (evt) {
         $("#feedback").removeClass('show');
