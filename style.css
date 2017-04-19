@@ -422,6 +422,7 @@ body {
     .overlay .popup {
         margin: 2.5% auto;
         height: 95%;
+        overflow: auto;
     }
 
     .form .form-control.textarea {
