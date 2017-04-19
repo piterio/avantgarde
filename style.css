@@ -166,7 +166,7 @@ body {
 }
 
 .restaurant .restaurant-figure .restaurant-img {
-    max-width: 100%;
+    width: 100%;
     max-height: 100%;
 }
 
@@ -407,4 +407,13 @@ body {
 
 .form .btn {
     margin: .5rem 0 0 2rem;
+}
+
+/* fix auto-zoom on iOS devices */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select,
+    textarea,
+    input {
+        font-size: 16px;
+    }
 }
