@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>Avantgarde</title>
     <link rel="stylesheet" href="js/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="style.css">
@@ -133,6 +133,12 @@
             depth: 100,
             modifier: 1,
             slideShadows: false
+        },
+        onTap: function (swiper, event) {
+            const $target = $(event.target);
+            if ($target.parents('.item').length > 0 && $target.parents('.swiper-slide-active').length === 0) {
+                swiper.slideTo($target.parents('.item').index());
+            }
         },
         onTransitionStart: function (swiper) {
             const $slide = $(swiper.slides[swiper.realIndex]);
